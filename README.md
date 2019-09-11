@@ -1,5 +1,7 @@
 # vue-firebase-tutorial
 
+## Implementation of [vue-2-firebase-tutorial](https://medium.com/@anas.mammeri/vue-2-firebase-how-to-build-a-vue-app-with-firebase-authentication-system-in-15-minutes-fdce6f289c3c)
+
 ## Project setup
 ```
 npm install

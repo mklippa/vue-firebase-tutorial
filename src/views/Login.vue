@@ -3,10 +3,12 @@
     <h2>Sign In</h2>
     <input
       type="text"
+      v-model="email"
       placeholder="Email"
     /> <br />
     <input
       type="password"
+      v-model="password"
       placeholder="Password"
     /> <br />
     <button @click="login">Connection</button>
@@ -16,14 +18,27 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+
 export default {
   name: 'login',
   data () {
-    return {}
+    return {
+      email: '',
+      password: ''
+    }
   },
   methods: {
     login () {
-      this.$router.replace('home')
+      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+        (user) => {
+          alert('Well done! You are now connected')
+        },
+        (err) => {
+          alert('Opps. ' + err.message)
+        }
+      )
+      // this.$router.replace('home')
     }
   }
 }

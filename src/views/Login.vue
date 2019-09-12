@@ -32,7 +32,7 @@ export default {
     login () {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
         (user) => {
-          alert('Well done! You are now connected')
+          this.$router.replace('/home')
         },
         (err) => {
           alert('Opps. ' + err.message)

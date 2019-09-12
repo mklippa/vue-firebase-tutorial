@@ -9,8 +9,9 @@
       type="password"
       placeholder="Password"
     /> <br />
-    <button>Connection</button>
-    <p>You don't have an accoutn? You can <router-link to="/sign-up">create one</router-link></p>
+    <button @click="login">Connection</button>
+    <p>You don't have an accoutn? You can <router-link to="/sign-up">create one</router-link>
+    </p>
   </div>
 </template>
 
@@ -20,7 +21,11 @@ export default {
   data () {
     return {}
   },
-  methods: {}
+  methods: {
+    login () {
+      this.$router.replace('home')
+    }
+  }
 }
 </script>
 

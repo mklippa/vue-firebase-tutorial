@@ -10,7 +10,7 @@
       placeholder="Password"
     /> <br />
     <button>Connection</button>
-    <p>You don't have an accoutn? You can create one</p>
+    <p>You don't have an accoutn? You can <router-link to="/sign-up">create one</router-link></p>
   </div>
 </template>
 

@@ -12,7 +12,7 @@
     >
     <br>
     <button>Sign Up</button>
-    <span>or go back to login</span>
+    <span>or go back to <router-link to="/login">login</router-link></span>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ input {
 }
 button {
   margin-top: 10px;
-  width: 10%;
+  width: 20%;
   cursor: pointer;
 }
 span {
